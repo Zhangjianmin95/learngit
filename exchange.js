@@ -1,3 +1,6 @@
+//中文转byte
+Array.prototype.map.call(str, function (c) { return c.charCodeAt(0); })
+
 function StringToByte ( str ) {
     var re = [], idx;
     for(var i = 0; i < str.length; i++)
