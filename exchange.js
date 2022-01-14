@@ -5,7 +5,7 @@ function StringToByte ( str ) {
     var re = [], idx;
     for(var i = 0; i < str.length; i++)
     {
-        idx = str.charCodeAt(i);
+        idx = str.charCodeAt(0);
         if(idx & 0xff00){
             re.push(idx >> 8);
             re.push(idx & 0xff);
@@ -39,6 +39,7 @@ function byteToString(arr) {
         } else {
             str += String.fromCharCode(_arr[i]);
         }
+        
     }
     return str;
 }  
